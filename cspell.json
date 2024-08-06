@@ -3,7 +3,10 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": ["Deno"],
+    "words": [
+        "Deno",
+        "pleasejs"
+    ],
     "ignoreWords": [],
     "import": []
 }
