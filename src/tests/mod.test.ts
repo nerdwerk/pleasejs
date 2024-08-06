@@ -1,9 +1,4 @@
-import {
-    assert,
-    assertEquals,
-    assertIsError,
-    assertThrows,
-} from "jsr:@std/assert@1";
+import { assert, assertEquals, assertIsError } from "jsr:@std/assert@1";
 
 import createPlease from "../mod.ts";
 
