@@ -15,6 +15,10 @@ const please: Please = {
             );
         }
 
+        if (this[key]) {
+            throw new Error(`A method named "${key}" was already assigned.`);
+        }
+
         this[key] = callback;
     },
 };

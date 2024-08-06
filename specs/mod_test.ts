@@ -34,6 +34,30 @@ Deno.test("please instance can remember new methods", () => {
     assert(please.custom() == "this should work");
 });
 
+Deno.test("#remember will not override existing methods", () => {
+    const { please } = setup();
+
+    const cb = () => {
+        return "this should work";
+    };
+
+    const cb2 = () => {
+        return "this should not work";
+    };
+
+    please.remember("custom", cb);
+    try {
+        please.remember("custom", cb2);
+        throw new Error("should have failed above");
+    } catch (err) {
+        assertIsError(
+            err,
+            Error,
+            'A method named "custom" was already assigned.',
+        );
+    }
+});
+
 Deno.test("remember will throw error for protected methods", () => {
     const { please } = setup();
 
