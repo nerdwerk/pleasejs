@@ -1,5 +1,15 @@
 {
     "name": "@nerd/pleasejs",
-    "version": "0.1.0",
-    "exports": "./mod.ts"
+    "version": "0.1.1",
+    "exports": "./src/mod.ts",
+    "publish": {
+        "include": [
+            "LICENSE",
+            "README.md",
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "src/tests"
+        ]
+    }
 }
