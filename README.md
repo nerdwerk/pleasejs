@@ -44,3 +44,7 @@ please.addNumbers(2, 40) // returns 42
 And that's it. As long as you share the same instance across your app, you'll have access to all your methods.
 It's recommended to add all your methods in one place, and not across the app.
 A `pleasejs` instance will warn you of overloading a method, so you won't accidentally remember two methods with the same key.
+
+**Caveats:**
+
+This Project is written with modern runtimes like **Deno** or **Bun** in mind.
